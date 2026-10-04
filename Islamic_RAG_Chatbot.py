@@ -1,6 +1,6 @@
 # Noor Library - Complete Islamic RAG Portal with Roman Urdu, Quran Detector & Audio
 # Built on top of Aicademy 360 RAG logic + new Islamic optimizations
-import os  # For environment variables and file paths
+### import os  # For environment variables and file paths
 import re  # For regex pattern matching (Quran refs, Roman Urdu)
 import hashlib  # For MD5 hash deduplication of books
 import tempfile  # For safe temporary PDF handling
@@ -9,7 +9,7 @@ from pathlib import Path  # For clean path management
 import json  # For persistent index metadata storage
 from typing import List, Dict  # For type hints
 import streamlit as st  # For web app UI
-from dotenv import load_dotenv  # For loading GROQ_API_KEY from .env
+#### from dotenv import load_dotenv  # For loading GROQ_API_KEY from .env
 from langchain_community.document_loaders import PyPDFLoader  # Fallback PDF loader
 from langchain_text_splitters import RecursiveCharacterTextSplitter  # For smart chunking with overlap
 from langchain_huggingface import HuggingFaceEmbeddings  # For local multilingual embeddings
@@ -39,7 +39,8 @@ try:
 except ImportError:
     HAS_TTS = False  # Disable audio if not installed
 
-load_dotenv()  # Load .env file for API keys
+### load_dotenv()  # Load .env file for API keys
+groq_api_key = st.secrets["GROQ_API_KEY"]
 
 # Configure Streamlit page with Islamic theme
 st.set_page_config(
