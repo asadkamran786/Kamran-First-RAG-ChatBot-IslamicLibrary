@@ -1,0 +1,19 @@
+# Fixed requirements for Python 3.12/3.13 Windows - NO PINNED OLD VERSIONS
+streamlit
+python-dotenv
+langchain-groq
+langchain-community
+langchain-text-splitters
+langchain-huggingface
+langchain-chroma
+chromadb
+sentence-transformers
+transformers
+torch
+pypdf
+PyMuPDF
+pytesseract
+Pillow
+gTTS
+numpy
+watchdog
