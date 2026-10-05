@@ -142,6 +142,7 @@ else:
 PERSIST_DIR.mkdir(parents=True, exist_ok=True)
 INDEX_META_FILE = PERSIST_DIR / "indexed_books.json"
 COLLECTION_NAME = "noor_islamic_library"
+DISCLAIMER = "⚠️ For information only - This is not a Fatwa. Please verify with authorized Ulama / مستند علمائے کرام سے تصدیق کریں۔"
 
 ROMAN_URDU_MAP = {
     'wazu': 'وضو', 'wudu': 'وضو', 'namaz': 'نماز', 'salah': 'صلاة', 'roza': 'روزہ',
@@ -240,7 +241,14 @@ def get_vectorstore():
 def main():
     st.markdown('<div class="hero"><div class="hero-kicker"> Kamran Islamic Library </div><h1>Kamran Islamic RAG Portal — Gold Dark Premium</h1><p>Upload Islamic books (Quran, Hadith, Fiqh). Ask in English, Urdu, Arabic or Roman Urdu.</p></div>', unsafe_allow_html=True)
 
-    # Sidebar
+# --- DISCLAIMER TOP ---
+st.markdown(f"""
+<div style="background: rgba(255,215,0,0.12); border: 1.5px solid rgba(255,215,0,0.4); border-radius: 12px; padding: 10px; margin: 10px 0; text-align:center;">
+<span style="color:#FFD700 !important; font-size:13px !important; font-weight:700 !important;">{DISCLAIMER}<br>یہ جوابات صرف معلوماتی ہیں، فتویٰ نہیں۔</span>
+</div>
+""", unsafe_allow_html=True)
+
+# Sidebar
     with st.sidebar:
         st.markdown("### 🔑 API Key")
         # Show if key exists
@@ -403,6 +411,7 @@ Answer with citations:"""
                         answer = llm.invoke(prompt).content
                         st.markdown("#### 📖 Answer")
                         st.success(answer)
+                        st.caption(f"⚠️ {DISCLAIMER}")           
                         
                         # Quran refs
                         ans_refs = detect_quran_refs(answer)
