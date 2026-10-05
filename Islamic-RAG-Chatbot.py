@@ -199,7 +199,7 @@ def get_vectorstore():
         return Chroma(embedding_function=embedding, collection_name=COLLECTION_NAME)
 
 def main():
-    st.markdown('<div class="hero"><div class="hero-kicker">نور لائبریری • NOOR LIBRARY</div><h1>Islamic RAG Portal — Gold Dark Premium</h1><p>Upload Islamic books (Quran, Hadith, Fiqh). Ask in English, Urdu, Arabic or Roman Urdu.</p></div>', unsafe_allow_html=True)
+    st.markdown('<div class="hero"><div class="hero-kicker"> Kamran Islamic Library </div><h1>Kamran Islamic RAG Portal — Gold Dark Premium</h1><p>Upload Islamic books (Quran, Hadith, Fiqh). Ask in English, Urdu, Arabic or Roman Urdu.</p></div>', unsafe_allow_html=True)
 
     # Sidebar
     with st.sidebar:
