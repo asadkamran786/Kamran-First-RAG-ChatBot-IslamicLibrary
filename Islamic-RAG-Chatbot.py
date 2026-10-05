@@ -106,7 +106,7 @@ p, span, div, label, li { color: #f5f5f5 !important; font-size: 15px !important;
 [data-testid="stSidebar"] { background: linear-gradient(180deg, #0a1e29 0%, #07161f 100%) !important; border-right: 2px solid rgba(233,201,123,0.25) !important; }
 [data-testid="stSidebar"] * { color: #ffffff !important; }
 .hero { padding: 2rem 2.2rem; border-radius: 24px; background: linear-gradient(135deg, rgba(233,201,123,0.28) 0%, rgba(0,128,96,0.35) 100%); border: 2px solid rgba(233,201,123,0.35); margin-bottom: 1.5rem; }
-.hero-kicker { color: #FFD700 !important; font-size: 20rem !important; font-weight: 800 !important; }
+.hero-kicker { color: #FFD700 !important; font-size: 2rem !important; font-weight: 800 !important; }
 .hero h1 { font-size: clamp(2.2rem, 4.5vw, 3.8rem) !important; color: #ffffff !important; font-weight: 800 !important; }
 .glass-card { background: rgba(18,50,58,0.95) !important; border: 2px solid rgba(233,201,123,0.25) !important; border-radius: 18px !important; padding: 1.3rem !important; }
 .card-label { color: #FFD700 !important; font-weight: 800 !important; }
