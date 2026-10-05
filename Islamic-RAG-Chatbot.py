@@ -249,7 +249,7 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 # Sidebar
-    with st.sidebar:
+        with st.sidebar:
         st.markdown("### 🔑 API Key")
         # Show if key exists
         has_key = False
