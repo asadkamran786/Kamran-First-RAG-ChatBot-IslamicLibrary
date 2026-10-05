@@ -119,8 +119,7 @@ def get_llm():
         key = os.getenv("GROQ_API_KEY")
     if not key:
         return None
-##   return ChatGroq(model="llama-3.1-8b-instant", groq_api_key=key, temperature=0.2)
-     return ChatGroq(model="llama-3.3-70b-versatile", groq_api_key=key, temperature=0.2)
+    return ChatGroq(model="llama-3.3-70b-versatile", groq_api_key=key, temperature=0.2)
 
 @st.cache_resource(show_spinner=False)
 def get_vectorstore():
