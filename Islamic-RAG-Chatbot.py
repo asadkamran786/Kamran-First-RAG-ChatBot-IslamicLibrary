@@ -65,6 +65,34 @@ st.set_page_config(
 )
 
 # GOLD DARK UI
+# st.markdown("""
+# <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+# <style>
+# .stApp {
+#    background: radial-gradient(circle at 15% 0%, rgba(233,201,123,0.22), transparent 28%),
+#                radial-gradient(circle at 85% 12%, rgba(0,168,132,0.20), transparent 30%),
+#                linear-gradient(180deg, #081a24 0%, #06131a 100%);
+#    color: #ffffff !important;
+#}
+# html, body, [class*="css"] { color: #ffffff !important; font-family: 'Inter', sans-serif; }
+# p, span, div, label, li { color: #f5f5f5 !important; font-size: 15px !important; font-weight: 500 !important; }
+# [data-testid="stSidebar"] { background: linear-gradient(180deg, #0a1e29 0%, #07161f 100%) !important; border-right: 2px solid rgba(233,201,123,0.25) !important; }
+# [data-testid="stSidebar"] * { color: #ffffff !important; }
+# .hero { padding: 2rem 2.2rem; border-radius: 24px; background: linear-gradient(135deg, rgba(233,201,123,0.28) 0%, rgba(0,128,96,0.35) 100%); border: 2px solid rgba(233,201,123,0.35); margin-bottom: 1.5rem; }
+# .hero-kicker { color: #FFD700 !important; font-size: 0.85rem !important; font-weight: 800 !important; }
+# .hero h1 { font-size: clamp(2.2rem, 4.5vw, 3.8rem) !important; color: #ffffff !important; font-weight: 800 !important; }
+# .glass-card { background: rgba(18,50,58,0.95) !important; border: 2px solid rgba(233,201,123,0.25) !important; border-radius: 18px !important; padding: 1.3rem !important; }
+# .card-label { color: #FFD700 !important; font-weight: 800 !important; }
+# .card-value { font-size: 2rem !important; font-weight: 800 !important; color: #ffffff !important; }
+# .evidence-card { border-radius: 14px !important; padding: 1.2rem !important; background: rgba(255,255,255,0.08) !important; border-left: 5px solid #FFD700 !important; color: #ffffff !important; }
+#.source-chip { background: rgba(233,201,123,0.25) !important; border: 1.5px solid rgba(233,201,123,0.45) !important; color: #ffffff !important; font-weight: 700 !important; padding: .35rem .75rem !important; border-radius: 999px !important; }
+#.arabic-text { font-family: 'Amiri', serif !important; direction: rtl; font-size: 1.45rem !important; color: #FFECB3 !important; }
+# </style>
+# """, unsafe_allow_html=True)
+
+#### Adding code to fix the text input font issue ######
+
+# GOLD DARK UI - FIXED
 st.markdown("""
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 <style>
@@ -72,9 +100,8 @@ st.markdown("""
     background: radial-gradient(circle at 15% 0%, rgba(233,201,123,0.22), transparent 28%),
                 radial-gradient(circle at 85% 12%, rgba(0,168,132,0.20), transparent 30%),
                 linear-gradient(180deg, #081a24 0%, #06131a 100%);
-    color: #ffffff !important;
 }
-html, body, [class*="css"] { color: #ffffff !important; font-family: 'Inter', sans-serif; }
+html, body { font-family: 'Inter', sans-serif; }
 p, span, div, label, li { color: #f5f5f5 !important; font-size: 15px !important; font-weight: 500 !important; }
 [data-testid="stSidebar"] { background: linear-gradient(180deg, #0a1e29 0%, #07161f 100%) !important; border-right: 2px solid rgba(233,201,123,0.25) !important; }
 [data-testid="stSidebar"] * { color: #ffffff !important; }
@@ -87,8 +114,20 @@ p, span, div, label, li { color: #f5f5f5 !important; font-size: 15px !important;
 .evidence-card { border-radius: 14px !important; padding: 1.2rem !important; background: rgba(255,255,255,0.08) !important; border-left: 5px solid #FFD700 !important; color: #ffffff !important; }
 .source-chip { background: rgba(233,201,123,0.25) !important; border: 1.5px solid rgba(233,201,123,0.45) !important; color: #ffffff !important; font-weight: 700 !important; padding: .35rem .75rem !important; border-radius: 999px !important; }
 .arabic-text { font-family: 'Amiri', serif !important; direction: rtl; font-size: 1.45rem !important; color: #FFECB3 !important; }
+
+/* === FIX FOR INVISIBLE TEXT - Black font inside text boxes === */
+textarea, input, [data-testid="stTextArea"] textarea, [data-testid="stTextInput"] input {
+    color: #000000 !important;
+    background-color: #ffffff !important;
+    -webkit-text-fill-color: #000000 !important;
+}
+textarea::placeholder, input::placeholder {
+    color: #6b7280 !important;
+}
 </style>
 """, unsafe_allow_html=True)
+
+
 
 # --- FIX 3: CLOUD PERSISTENCE - Use /tmp on Streamlit Cloud, local otherwise ---
 # Streamlit Cloud is ephemeral, /tmp is writable. Also handle relative path.
