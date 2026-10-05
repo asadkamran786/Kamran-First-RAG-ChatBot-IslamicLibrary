@@ -14,3 +14,4 @@ sentence-transformers
 groq
 gtts
 Pillow<11
+torchvision
