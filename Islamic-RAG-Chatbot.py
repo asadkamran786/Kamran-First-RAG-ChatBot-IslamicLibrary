@@ -116,7 +116,7 @@ def get_vectorstore():
         client=chromadb.EphemeralClient()
         return Chroma(client=client, embedding_function=emb, collection_name=COLLECTION_NAME)
 
-st.set_page_config(page_title="Kamran Islamic Library", page_icon="🕌", layout="wide")
+st.set_page_config(page_title="Kamran RAG Chatbot-Islamic Library", page_icon="🕌", layout="wide")
 
 st.markdown("""
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Amiri:wght@700&display=swap" rel="stylesheet">
