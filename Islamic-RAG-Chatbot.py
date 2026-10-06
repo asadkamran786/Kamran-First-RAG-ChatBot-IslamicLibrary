@@ -184,7 +184,7 @@ p, span, div, label, li { color: #f5f5f5 !important; font-size: 14px !important;
 """, unsafe_allow_html=True)
 
 def main():
-    st.markdown('<div class="hero"><div class="hero-kicker">Kamran Islamic Library</div><h1>🕌 Kamran Islamic RAG Portal — Gold Dark Premium</h1><p>✨ Islamic Knowledge + AI Technology • Quran • Hadith • Fiqh • 5106+ Chunks</p></div>', unsafe_allow_html=True)
+    st.markdown('<div class="hero"><div class="hero-kicker">Kamran RAG Chatbot-Islamic Library</div><h1>🕌 Kamran Islamic RAG Portal — Gold Dark Premium</h1><p>✨ Islamic Knowledge + AI Technology • Quran • Hadith • Fiqh • 5106+ Chunks</p></div>', unsafe_allow_html=True)
     st.markdown(f'<div style="background: linear-gradient(90deg, rgba(255,215,0,0.15), rgba(255,165,0,0.1)); border: 1.5px solid rgba(255,215,0,0.4); border-radius: 12px; padding: 8px; text-align:center;"><span style="color:#FFD700 !important; font-size:11px !important; font-weight:700 !important;">⚠️ {DISCLAIMER} | یہ جوابات صرف معلوماتی ہیں، فتویٰ نہیں</span></div>', unsafe_allow_html=True)
 
     with st.sidebar:
